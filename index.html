@@ -24,7 +24,13 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="search-items">
-                <input type="text" name="google_search" placeholder="Search Google or type a URl" id="google_search" onclick="google_search()">
+                <form id="gform" action="https://www.google.com/search" method="GET">
+                    <input type="text" name="q" placeholder="Search Google or type a URl" class="search-input"
+                        onclick="search_text()" id="gform-input">
+                </form>
+            </div>
+            <div>
+                <input class="search-items form-button" form="gform" type="submit" value="Search" />
             </div>
             <div class="search-items">
                 <i class="fa-solid fa-microphone"></i>
@@ -38,59 +44,64 @@
             <div class="main-left">
                 <div class="whatapp">
                     <i class="fa-brands fa-youtube"></i>
-                    <a href="https://www.youtube.com/">you tube</a>
+                    <a href="https://www.youtube.com/" target="_blank">you tube</a>
                 </div>
                 <div class="whatapp">
-                    <i class="fa-brands fa-chrome"></i>
-                    <a href="https://chat.openai.com/">chat gpt</a>
+                    <i class="fa-brands fa-chrome" target="_blank"></i>
+                    <a href="https://chat.openai.com/" target="_blank">chat gpt</a>
                 </div>
-               
+
                 <div class="whatapp">
                     <i class="fa-brands fa-square-instagram"></i>
-                    <a href="https://instagram.com/gautamku961?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">instagram</a>
+                    <a href="https://instagram.com/gautamku961?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                        target="_blank">instagram</a>
                 </div>
             </div>
             <!-- second part -->
             <div class="main-right">
                 <div class="whatapp">
                     <i class="fa-brands fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/gautam-kumar-389576267">linkdin</a>
+                    <a href="https://www.linkedin.com/in/gautam-kumar-389576267" target="_blank">linkdin</a>
                 </div>
                 <div class="whatapp">
                     <i class="fa-solid fa-message"></i>
-                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">gmail</a>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">gmail</a>
                 </div>
                 <div class="whatapp">
                     <i class="fa-brands fa-facebook"></i>
-                    <a href="https://www.facebook.com/profile.php?id=100087771294618&mibextid=ZbWKwL">facebook</a>
+                    <a href="https://www.facebook.com/profile.php?id=100087771294618&mibextid=ZbWKwL"
+                        target="_blank">facebook</a>
                 </div>
             </div>
             <!-- third part -->
             <div class="main-third">
                 <div class="whatapp">
                     <i class="fa-brands fa-square-whatsapp"></i>
-                    <a href="https://wa.link/v40l02">whats app</a>
+                    <a href="https://wa.link/v40l02" target="_blank">whats app</a>
                 </div>
                 <div class="whatapp">
                     <i class="fa-solid fa-icons"></i>
-                    <a href="https://fontawesome.com/search">font icon</a>
+                    <a href="https://fontawesome.com/search" target="_blank">font icon</a>
                 </div>
                 <div class="whatapp">
                     <i class="fa-brands fa-google"></i>
-                    <a href="https://www.google.com/">google</a>
+                    <a href="https://www.google.com/" target="_blank">google</a>
                 </div>
                 <div class="whatapp">
                     <i class="fa-brands fa-chrome"></i>
-                    <a href="#">nothing</a>
+                    <a href="https://getbootstrap.com/" target="_blank">nothing</a>
                 </div>
             </div>
         </main>
     </div>
 </body>
 <script>
-    function google_search(){
-        document.getElementById('google_search').style.outline="none"
-        
+    // function google_search() {
+    //     document.getElementById('google_search').style.outline = "none"
+    //     document.getElementById('gform-input').value="";
+    // }
+    function search_text() {
+        document.getElementById('gform-input').value = "";
     }
 </script>
 
